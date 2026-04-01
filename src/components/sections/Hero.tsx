@@ -77,7 +77,7 @@ export default function Hero() {
  
         {/* Orbiting Circles */}
         <BlurFade delay={0.05}>
-          <div className="relative h-[320px] w-full mb-0 -mt-8 flex items-center justify-center">
+          <div className="relative h-[320px] w-full mb-4 -mt-20 flex items-center justify-center">
  
             {/* Cercle central */}
             <div className="absolute w-24 h-24 rounded-full bg-blue-500/10 border-2 border-blue-500/25 flex items-center justify-center z-10 shadow-[0_0_40px_rgba(37,99,235,0.15)]">
