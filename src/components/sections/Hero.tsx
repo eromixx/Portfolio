@@ -74,29 +74,29 @@ export default function Hero() {
       {/* Contenu */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         
-        {/* Orbiting Circles */}
-        <BlurFade delay={0.05}>
-          <div className="relative h-[200px] w-full mb-6 flex items-center justify-center">
-            {/* Cercle central */}
-            <div className="absolute w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center z-10">
-              <span className="font-heading text-xl font-bold text-blue-400">RG</span>
-            </div>
- 
-            {/* Orbite intérieure */}
-            <OrbitingCircles radius={70} duration={25} iconSize={32}>
-              <ReactIcon />
-              <TypeScriptIcon />
-              <TailwindIcon />
-            </OrbitingCircles>
- 
-            {/* Orbite extérieure — sens inverse */}
-            <OrbitingCircles radius={120} duration={30} reverse iconSize={28}>
-              <GitIcon />
-              <SeoIcon />
-              <ViteIcon />
-            </OrbitingCircles>
+      {/* Orbiting Circles */}
+      <BlurFade delay={0.05}>
+        <div className="relative h-[280px] w-full mb-2 flex items-center justify-center -mt-4">
+          {/* Cercle central */}
+          <div className="absolute w-20 h-20 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center z-10">
+            <span className="font-heading text-2xl font-bold text-blue-400">RG</span>
           </div>
-        </BlurFade>
+
+          {/* Orbite intérieure */}
+          <OrbitingCircles radius={100} duration={25} iconSize={36} path>
+            <ReactIcon />
+            <TypeScriptIcon />
+            <TailwindIcon />
+          </OrbitingCircles>
+
+          {/* Orbite extérieure — sens inverse */}
+          <OrbitingCircles radius={160} duration={30} reverse iconSize={32} path>
+            <GitIcon />
+            <SeoIcon />
+            <ViteIcon />
+          </OrbitingCircles>
+        </div>
+      </BlurFade>
  
         {/* Badge */}
         <BlurFade delay={0.1}>
