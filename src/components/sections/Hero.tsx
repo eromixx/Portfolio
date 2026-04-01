@@ -64,33 +64,23 @@ export default function Hero() {
       id="accueil"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
-      {/* Background effect */}
       <DotPattern
         className="absolute inset-0 opacity-30 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_70%)]"
       />
- 
-      {/* Gradient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-[120px] pointer-events-none" />
- 
-      {/* Contenu */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
- 
         {/* Orbiting Circles */}
         <BlurFade delay={0.05}>
           <div className="relative h-[320px] w-full mb-4 -mt-20 flex items-center justify-center">
- 
-            {/* Cercle central */}
             <div className="absolute w-24 h-24 rounded-full bg-blue-500/10 border-2 border-blue-500/25 flex items-center justify-center z-10 shadow-[0_0_40px_rgba(37,99,235,0.15)]">
               <span className="font-heading text-3xl font-bold text-blue-400">RG</span>
             </div>
- 
             {/* Orbite intérieure — React, TypeScript, GitHub */}
             <OrbitingCircles radius={120} duration={25} iconSize={42} path>
               <ReactIcon />
               <TypeScriptIcon />
               <GithubIcon />
             </OrbitingCircles>
- 
             {/* Orbite extérieure — Tailwind, Lua, Redux */}
             <OrbitingCircles radius={190} duration={35} reverse iconSize={38} path>
               <TailwindIcon />
@@ -100,7 +90,6 @@ export default function Hero() {
           </div>
         </BlurFade>
  
-        {/* Badge */}
         <BlurFade delay={0.1}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 mb-8">
             <span className="relative flex h-2 w-2">
