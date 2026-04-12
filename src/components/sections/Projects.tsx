@@ -232,9 +232,6 @@ export default function Projects() {
         {/* En-tête de section */}
         <BlurFade delay={0.1}>
           <div className="text-center mb-16">
-            <span className="inline-block font-mono text-sm text-blue-400 mb-3">
-              &lt;Projets /&gt;
-            </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">
               Mes réalisations
             </h2>

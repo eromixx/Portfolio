@@ -64,9 +64,6 @@ export default function About() {
         {/* En-tête */}
         <BlurFade delay={0.1}>
           <div className="text-center mb-16">
-            <span className="inline-block font-mono text-sm text-blue-400 mb-3">
-              &lt;À propos /&gt;
-            </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">
               Mon parcours
             </h2>
