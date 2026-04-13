@@ -26,14 +26,15 @@ function ProjectCard({
       gradientColor="rgba(37, 99, 235, 0.08)"
     >
       <div className="p-5" onClick={() => onSelect(project)}>
-        {/* Image placeholder */}
-        <div className="w-full h-44 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 border border-border-subtle mb-4 overflow-hidden flex items-center justify-center relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-bg-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <span className="font-mono text-sm text-text-muted">
-            {project.title}
-          </span>
-          {/* Si tu as des images, remplace par : */}
-          {/* <img src={project.image} alt={project.title} className="w-full h-full object-cover" /> */}
+        {/* Image du projet */}
+        <div className="w-full h-44 rounded-lg border border-border-subtle mb-4 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-bg-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+          <img
+            src={project.image}
+            alt={`Capture d'écran du projet ${project.title}`}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
         </div>
  
         {/* Catégorie */}
@@ -105,6 +106,12 @@ function ProjectDetail({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-detail-title"
+      onKeyDown={(e) => {
+        if (e.key === "Escape") onClose();
+      }}
     >
       {/* Overlay */}
       <motion.div
@@ -129,7 +136,7 @@ function ProjectDetail({
             <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/15 mb-2">
               {categoryLabels[project.category]}
             </span>
-            <h2 className="font-heading text-2xl font-bold text-text-primary">
+            <h2 id="project-detail-title" className="font-heading text-2xl font-bold text-text-primary">
               {project.title}
             </h2>
             <p className="text-sm text-text-muted mt-1">{project.subtitle}</p>
@@ -145,11 +152,12 @@ function ProjectDetail({
  
         <div className="p-6 space-y-6">
           {/* Image */}
-          <div className="w-full h-56 sm:h-64 rounded-xl bg-gradient-to-br from-blue-900/30 to-blue-800/10 border border-border-subtle flex items-center justify-center overflow-hidden">
-            <span className="font-mono text-sm text-text-muted">
-              {project.title} — Screenshot
-            </span>
-            {/* <img src={project.image} alt={project.title} className="w-full h-full object-cover" /> */}
+          <div className="w-full h-56 sm:h-64 rounded-xl border border-border-subtle overflow-hidden">
+            <img
+              src={project.image}
+              alt={`Capture d'écran du projet ${project.title}`}
+              className="w-full h-full object-cover"
+            />
           </div>
  
           {/* Stack complète */}
@@ -287,3 +295,4 @@ export default function Projects() {
     </section>
   );
 }
+ 
