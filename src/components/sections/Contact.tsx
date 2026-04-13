@@ -32,6 +32,7 @@ interface FormErrors {
  
 type FormStatus = "idle" | "sending" | "success" | "error";
  
+// début de section //
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",

@@ -51,6 +51,8 @@ const ReduxIcon = () => (
   </svg>
 );
  
+// debut de séction //
+
 export default function Hero() {
   const handleScroll = (href: string) => {
     const element = document.querySelector(href);

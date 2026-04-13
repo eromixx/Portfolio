@@ -49,6 +49,8 @@ const strengths = [
       "Habitué à gérer des projets de A à Z en freelance, avec une communication claire et des livrables soignés.",
   },
 ];
+
+// début de section //
  
 export default function About() {
   const handleScroll = (href: string) => {

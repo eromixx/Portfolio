@@ -12,7 +12,7 @@ interface SkillCategory {
   description: string;
   skills: Skill[];
 }
- 
+{/*Variable Catégorie */}
 const skillCategories: SkillCategory[] = [
   {
     title: "Front-End",
@@ -74,6 +74,7 @@ const levelColors: Record<string, string> = {
   Intermédiaire: "bg-bg-tertiary text-text-secondary border-border-subtle",
 };
  
+// début de section //
 export default function Skills() {
   return (
     <section id="competences" className="py-24 sm:py-32 relative">

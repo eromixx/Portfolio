@@ -12,7 +12,7 @@ const categoryLabels: Record<string, string> = {
   seo: "SEO",
   gestion: "Gestion de projet",
 };
- 
+
 function ProjectCard({
   project,
   onSelect,
@@ -223,6 +223,8 @@ function ProjectDetail({
   );
 }
  
+// début de section //
+
 export default function Projects() {
   const [filter, setFilter] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
